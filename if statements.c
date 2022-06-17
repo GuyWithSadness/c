@@ -1,4 +1,4 @@
-#import <stdio.h>
+#include <stdio.h>
 
 
 void main(){
@@ -16,10 +16,10 @@ if else statement
 
     your average if else statement
 
-    if(boolean_expression) {
-    (statement(s) will execute if the boolean expression is true)
+    if (boolean_expression) {
+    	(statement(s) will execute if the boolean expression is true)
     } else {
-    (statement(s) will execute if the boolean expression is false)
+    	(statement(s) will execute if the boolean expression is false)
 
 if else if else statement
 
@@ -52,18 +52,20 @@ switch statement
 
     switch(expression) {
 
-       case constant-expression  :
+       case (constant-expression)  :
           statement(s);
           break; ( optional )
 
-       case constant-expression  :
+       case (constant-expression)  :
           statement(s);
           break; ( optional )
 
-       ( you can have any number of case statements )
-       default : ( Optional )
-       statement(s);
+       (you can have any number of case statements)
+       default :
+    		statement(s);
     }
+	default will run if none of the expression matches any of the case
+	default is optional
 
 nested switch statement
 
@@ -88,7 +90,7 @@ nested switch statement
 
 ? operator (short hand if)
 
-(condition)? true do what : false do what
+(condition)? (true do what) : (false do what)
 
 */
 
@@ -149,13 +151,13 @@ never becomes false
 
 int main () {
 
-   for( ; ; ) {
-      printf("This loop will run forever.\n");
-   }
-
+	for( ; ; ) {
+    	printf("This loop will run forever.\n");
+	}
+	while (1){
+		printf("This loop also runs forever.\n");
+	}
    return 0;
 }
-/*
-
-
+*/
 }

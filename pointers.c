@@ -106,6 +106,8 @@ void main(){
     /* Passing Pointers to Functions
 
     void fun(int *pnt)
+	to use the function
+	fun(&variable)
 
     */
 
@@ -174,7 +176,4 @@ void main(){
     ptr--;
     printf("%x\n", ptr);
     printf("%c", *ptr);
-
-
-
 }

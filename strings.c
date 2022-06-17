@@ -17,7 +17,7 @@ int main(){
     // \0 tells C that the string ends there//
     // thats why the total length of the array has a + 1//
 
-    // USER IPUT WOOOOOOOOOOOOOOOOO//
+    // user input//
 
     // Create an integer variable that will store the number we get from the user
     int myNum;
@@ -32,7 +32,7 @@ int main(){
     printf("Your number is: %d", myNum);
 
     /*
-    Memory Address - im gonna be very honest with you i have no idea what this is
+    Memory Address
 
     Location where variable is stored on the computer
 
@@ -52,7 +52,7 @@ int main(){
     int* ptr = &wtf;
     printf("\n%d", wtf);
     printf("\n%p", &wtf);
-    printf("\n%p", wtf); // you dumbass this just prints the value of wtf in hex
+    printf("\n%p", wtf); //this just prints the value of wtf in hex
     printf("\n%p", ptr);
     printf("\n%d", *ptr); // this is dereference //
 

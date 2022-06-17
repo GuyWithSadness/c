@@ -1,6 +1,15 @@
+#include <stdio.h>
 void main()
 {
+	char a[] = "testing";
+	char *ptr;
+	ptr = a;
 
+	while (*ptr != '\0')
+	{
+		printf("%c", *ptr);
+		ptr++; // ok so this works LMAO
+	}
     /* Arrays
 
     type arrayName [ arraySize ];
@@ -62,7 +71,7 @@ void main()
 
     /* Passing Array as Functions (How to use arrays in functions)
 
-        Way 1
+        Way 1 (usually do this)
             void myFunction(int *param) {
                .
                .
@@ -85,15 +94,30 @@ void main()
 
     */
     /* Return Array From Function
+	Just return the pointer to the array initialize in the function
+	oh and make it static or else it values will not save outside the function
 
-
+	int *array()
+	{
+		static a[] = {1,2,3,4,5,6};
+		return (a);
+	}
 
     */
     /* Pointer to an Array in C
 
+	int a[10];
 
+	a is a pointer to &a[0];
 
-    */
+	int *p;
+	p = a is the same as p = &a[0]
 
+	you can access the elements by doing
+	*p, *(p+1), *(p+2), *(p+3)...
+
+	or just use a[n] lmao;
+
+	*/
 }
 
