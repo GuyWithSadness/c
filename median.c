@@ -4,7 +4,7 @@
 void swap(int *num1, int *num2)
 {
     int temp;
-    
+
     temp = *num1;
     *num1 = *num2;
     *num2 = temp;
@@ -36,7 +36,7 @@ void sort(int* tab, int start, int end)
         sort(tab, (pivotindex + 1), end);
         sort(tab, start, (pivotindex - 1));
     }
-    
+
 }
 
 double findMedianSortedArrays(int* num1, int num1size, int* num2, int num2size)
@@ -58,7 +58,15 @@ double findMedianSortedArrays(int* num1, int num1size, int* num2, int num2size)
     if (totalsize % 2 == 0)
         median = (all[totalsize / 2] + all[(totalsize / 2) + 1]) / 2;
     else if (totalsize % 2 == 1)
-        all[(totalsize / 2) + 1]; 
+        all[(totalsize / 2) + 1];
 
     return median;
+}
+
+int main()
+{
+	int num1[] = {1,2,3,4,5};
+	int num2[] = {2,3,4,5,1,3};
+	int median = findMedianSortedArrays(num1, 5, num2, 6);
+	printf("The median is %d", median);
 }
