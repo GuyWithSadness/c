@@ -18,8 +18,8 @@ int partition(int *tab, int start, int end)
     {
         if (tab[start] > pivot)
         {
-            swap(tab[start], tab[end - 1]);
-            swap(tab[end], tab[end - 1]);
+            swap(&tab[start], &tab[end - 1]);
+            swap(&tab[end], &tab[end - 1]);
             end--;
         }
     }
