@@ -26,7 +26,7 @@ int partition(int *tab, int start, int end)
     return end;
 }
 
-void sort(int* tab, int start, int end, int size)
+void sort(int* tab, int start, int end)
 {
     int pivotindex;
     // Attempt to quicksort, Part 1;
@@ -53,7 +53,7 @@ double findMedianSortedArrays(int* num1, int num1size, int* num2, int num2size)
     for (int i = 0; i < num2size; i++)
         all[i] = num2[i];
 
-    sort(all, totalsize);
+    sort(all, 0, totalsize);
 
     if (totalsize % 2 == 0)
         median = (all[totalsize / 2] + all[(totalsize / 2) + 1]) / 2;
