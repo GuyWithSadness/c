@@ -33,8 +33,8 @@ void sort(int* tab, int start, int end, int size)
     pivotindex = partition(tab, start, end);
     if (start < end)
     {
-        sort(tab, (pivot + 1), end);
-        sort(tab, start, (pivot - 1));
+        sort(tab, (pivotindex + 1), end);
+        sort(tab, start, (pivotindex - 1));
     }
     
 }
