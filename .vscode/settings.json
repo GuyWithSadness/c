@@ -1,6 +1,7 @@
 {
 	"files.associations": {
 		"ithinkthisishowlistworks": "c",
-		"longestcommonprefix": "c"
+		"longestcommonprefix": "c",
+		"maxsubarray": "c"
 	}
 }

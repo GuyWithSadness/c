@@ -27,7 +27,9 @@ char *bits(int num)
 	(num < 0) ? (bits[i] = '-', num *= -1) : (bits[i] = '+');
 
 	for (i = 1; i < 12; i++, num /= 2){
-		bits[i] = (num % 2) + '0';}
+		bits[i] = (num % 2) + '0';
+	}
+
 	rev(bits);
 	bits[12] = '\0';
 	return(bits);
@@ -50,16 +52,13 @@ char *Add(char *bita, char *bitb, char *ansbit){
 	int carry = 0, value, futurecarry = 0;
 	for (int i = 11; i != 0; i--)
 	{
-		printf("\n\n At index %d\n", i);
 		value = 0;
 		carry = futurecarry;
-		printf("carry is %d\n", carry);
+
 		futurecarry = 0;
 		if (bita[i] == bitb[i]) {
 			if (bita[i] == '1' && bitb[i] == '1'){
 				futurecarry = 1;
-				printf("saw %c and %c at %d\n", bita[i], bitb[i], i);
-				printf("changed future carry to 1\n");
 			}
 		}
 		else
@@ -69,14 +68,12 @@ char *Add(char *bita, char *bitb, char *ansbit){
 			if (value == 1 && !(--carry)){
 				value = 0;
 				futurecarry = 1;
-				printf("changed future carry to 1\n");
 			}
-			if (value == 0 && !(--carry))
+			else if (value == 0 && !(--carry))
 				value = 1;
 		}
-		printf("value is %d\n", value);
+
 		ansbit[i] = value + '0';
-		printf("ansbit look like this: %s\n", ansbit);
 	}
 	return ansbit;
 }

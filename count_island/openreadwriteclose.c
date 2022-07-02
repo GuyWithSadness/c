@@ -55,6 +55,8 @@ Flags
 	O_RDWR - read and write
 	O_CREAT - create file if doesnt exists
 	O_EXCL - prevent creation if it already exists
+	to write multiple flags, use |
+	O_RDWR | O_CREAT
 
 
 3. close = close the file
@@ -86,7 +88,7 @@ fd = file descriptor
 buf = buffer to write data from
 cnt = length of buffer
 
-Returns how many bytes were actually read
+Returns how many bytes were actually written
 	return 0 on EOF
 	return -1 on error or on signal interrupt
 */

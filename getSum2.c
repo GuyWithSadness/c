@@ -1,3 +1,4 @@
+// easy version
 #include <stdio.h>
 int getSum(int a, int b)
 {

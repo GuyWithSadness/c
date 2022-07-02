@@ -1,4 +1,3 @@
-#define ABS(x) (-x)
 #include <stdio.h>
 
 int minSteps(char * s, char * t){
@@ -9,22 +8,23 @@ int minSteps(char * s, char * t){
 		charfound[s[i] - 'a']++;
 		charfound[t[i] - 'a']--;
 	}
-	int steps = 0;
+	int missing = 0;
+	int extra = 0;
 	for (int i = 0; i < 26; i++)
 	{
-		printf("needed %c = %d\n", i+'a', charfound[i]);
 		if (charfound[i] != 0)
 		{
 			if (charfound[i] < 0)
-				ABS(charfound[i]);
-			steps += charfound[i];
+				extra += -(charfound[i]);
+			else
+				missing += charfound[i];
 		}
 	}
-
-	return steps;
+	if (extra == missing)
+		return (extra);
 }
 
 int main()
 {
-	printf("%d\n", minSteps("bob", "obo"));
+	printf("%d\n", minSteps("bobkkkkk", "obokkokok"));
 }

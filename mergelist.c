@@ -20,7 +20,6 @@ void swap(list *a, list *b)
 list *sort(list *list1)
 {
 	list *current, *current2;
-	current = &list1[0];
 
 	for (current = list1; current != NULL; current = current->next)
 		for(current2 = current->next; current2 != NULL; current2 = current2->next)
